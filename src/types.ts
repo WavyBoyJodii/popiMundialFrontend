@@ -1,3 +1,10 @@
+export interface BloggerType {
+  username: string;
+  password: string;
+  email: string;
+  admin: boolean;
+}
+
 export interface PostType {
   tags: string[];
   _id: string;
@@ -6,7 +13,7 @@ export interface PostType {
   mediaUrl: string;
   content: string;
   genre: string;
-  blogger: string;
+  blogger: BloggerType;
   __v: number;
-  date_created: string;
+  date_created: Date;
 }

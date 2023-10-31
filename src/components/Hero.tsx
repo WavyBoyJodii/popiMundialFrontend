@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Container from './Container';
 import Post from './Post';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { PostType } from '@/types';
 
 export default function Hero() {
@@ -10,10 +10,11 @@ export default function Hero() {
   useEffect(() => {
     async function getThree() {
       try {
-        const result = await axios.get<PostType[]>(
+        const result: AxiosResponse = await axios.get<PostType[]>(
           'https://firstblogbackend-production.up.railway.app/posts'
         );
-        const sliced = result.data.slice(0, 3);
+        console.log(result);
+        const sliced: PostType[] = result.data.allPosts.slice(0, 3);
         setThreeLatestPosts(sliced);
       } catch (err) {
         console.log(err);
@@ -24,8 +25,8 @@ export default function Hero() {
 
   return (
     <Container>
-      <div className="space-y-10 pb-10">
-        <div className="p-4 grid grid-cols-1 sm:p-6 lg:p-8 md:grid-cols-2 md:grid-rows-2 rounded-lg overflow-hidden">
+      <div className="space-y-10 pb-10 ">
+        <div className="p-4 grid grid-cols-1 sm:p-6 lg:p-8 md:grid-cols-2 md:grid-rows-2 rounded-lg gap-4 max-h-screen">
           {threeLatestPosts &&
             threeLatestPosts.map((post, index) => (
               <Post
