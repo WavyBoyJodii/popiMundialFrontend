@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <Container>
       <div className="space-y-10 pb-10 ">
-        <div className="p-4 grid grid-cols-1 sm:p-6 lg:p-8 md:grid-cols-2 md:grid-rows-2 rounded-lg gap-4 max-h-screen">
+        <div className="p-4 grid grid-cols-1 sm:p-6 lg:p-8 md:grid-cols-2 md:grid-rows-2 rounded-lg gap-4 h-full">
           {threeLatestPosts &&
             threeLatestPosts.map((post, index) => (
               <Post
