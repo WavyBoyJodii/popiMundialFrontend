@@ -27,7 +27,7 @@ export default function Post({ data, className, isTall }: PostProps) {
       <CardContent className="pt-4">
         <div
           className={` ${
-            isTall ? 'w-full h-96' : 'w-72'
+            isTall ? 'w-full h-96' : 'md:w-48 lg:w-64 xl:w-72'
           } aspect-square  bg-gray-200 rounded-t-lg`}
         >
           <img
