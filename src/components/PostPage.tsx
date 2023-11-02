@@ -6,6 +6,7 @@ import { DateTime } from 'luxon';
 import validator from 'validator';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import PostSelector from './PostSelector';
 
 // interface RouteParams {
 //   postId: string;
@@ -84,6 +85,7 @@ export default function PostPage() {
           /> */}
         </div>
         <div className=" p-20 text-base text-center">{decodedContent}</div>
+        <PostSelector activePost={post} />
       </div>
     </Container>
   );
