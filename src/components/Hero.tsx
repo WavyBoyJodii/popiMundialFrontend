@@ -47,7 +47,12 @@ export default function Hero() {
             ))}
         </div>
       </div>
-      <LatestPostList posts={latestPosts} />
+      <LatestPostList
+        posts={latestPosts}
+        isGenre={false}
+        isLatest={true}
+        genre=""
+      />
     </Container>
   );
 }

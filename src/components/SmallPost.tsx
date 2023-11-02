@@ -17,7 +17,7 @@ export default function SmallPost({ data }: SmallPostProps) {
             src={decodedArt}
             className=" aspect-square object-cover rounded-3xl"
           />
-          <div className="backdrop-filter backdrop-blur-md bg-opacity-50 absolute bottom-0 w-full h-16 rounded-b-3xl text-center p-6  text-sm lg:text-lg bg-white">
+          <div className="backdrop-filter backdrop-blur-md bg-opacity-50 absolute bottom-0 w-full h-16 rounded-b-3xl text-center p-6  text-sm md:text-base  bg-white">
             {data.title}
           </div>
         </CardContent>

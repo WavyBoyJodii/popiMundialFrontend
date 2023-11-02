@@ -16,15 +16,15 @@ export default function Header() {
             </Link>
           </div>
           <nav className="mx-6 flex items-center justify-items-center space-x-4 lg:space-x-6 hidden md:block">
-            {/* <Link to="/"> */}
-            <Button variant="ghost">Dembow</Button>
-            {/* </Link> */}
-            {/* <Link to="shop"> */}
-            <Button variant="ghost">Trap</Button>
-            {/* </Link> */}
-            {/* <Link to="shop"> */}
-            <Button variant="ghost">Reggaeton</Button>
-            {/* </Link> */}
+            <Link to="/genre/Dembow">
+              <Button variant="ghost">Dembow</Button>
+            </Link>
+            <Link to="/genre/Trap">
+              <Button variant="ghost">Trap</Button>
+            </Link>
+            <Link to="/genre/Reggaeton">
+              <Button variant="ghost">Reggaeton</Button>
+            </Link>
           </nav>
           <Sheet>
             <SheetTrigger className="md:hidden">

@@ -5,9 +5,17 @@ import { Button } from './ui/button';
 
 interface PostListProps {
   posts: PostType[];
+  isGenre: boolean;
+  isLatest: boolean;
+  genre: string | null;
 }
 
-export default function LatestPostList({ posts }: PostListProps) {
+export default function LatestPostList({
+  posts,
+  isGenre,
+  isLatest,
+  genre,
+}: PostListProps) {
   const [displayedPosts, setDisplayedPosts] = useState<PostType[]>([]);
   const [allPosts, setAllPosts] = useState<PostType[]>([]);
   //   const [morePosts, setMorePosts] = useState<boolean>(false);
@@ -22,7 +30,11 @@ export default function LatestPostList({ posts }: PostListProps) {
 
   useEffect(() => {
     setAllPosts(posts);
-    displayNextPosts(6);
+    if (posts.length > 0) {
+      displayNextPosts(6);
+    } else {
+      setDisplayedPosts([]);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [posts]);
 
@@ -45,7 +57,8 @@ export default function LatestPostList({ posts }: PostListProps) {
 
   return (
     <div className=" space-y-4 p-4 h-auto">
-      <h1 className=" text-2xl mb-6">Latest Posts</h1>
+      {isGenre && <h1 className=" text-2xl mb-6 text-center">{genre}</h1>}
+      {isLatest && <h1 className=" text-2xl mb-6 text-center">Latest Posts</h1>}
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {displayedPosts.map((post) => (
           <SmallPost key={post._id} data={post} />

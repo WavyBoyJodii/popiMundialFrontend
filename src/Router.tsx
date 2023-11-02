@@ -3,6 +3,7 @@ import App from './App';
 import ErrorPage from './components/ErrorPage';
 import Hero from './components/Hero';
 import PostPage from './components/PostPage';
+import GenrePage from './components/GenrePage';
 
 export default function Router() {
   const router = createBrowserRouter([
@@ -19,6 +20,12 @@ export default function Router() {
         {
           path: 'post/:postId',
           element: <PostPage />,
+          errorElement: <ErrorPage />,
+          // loader: postLoader,
+        },
+        {
+          path: 'genre/:genre',
+          element: <GenrePage />,
           errorElement: <ErrorPage />,
           // loader: postLoader,
         },
