@@ -6,14 +6,14 @@ export interface BloggerType {
 }
 
 export interface PostType {
-  tags: string[];
   _id: string;
   title: string;
   art: string;
   mediaUrl: string;
   content: string;
+  date_created: Date;
+  tags: string[];
   genre: string;
   blogger: BloggerType;
   __v: number;
-  date_created: Date;
 }

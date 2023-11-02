@@ -23,6 +23,7 @@ export default function LatestPostList({ posts }: PostListProps) {
   useEffect(() => {
     setAllPosts(posts);
     displayNextPosts(6);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [posts]);
 
   const loadMorePosts = () => {
@@ -44,7 +45,7 @@ export default function LatestPostList({ posts }: PostListProps) {
 
   return (
     <div className=" space-y-4 p-4 h-auto">
-      <h1 className=" text-2xl">Latest Posts</h1>
+      <h1 className=" text-2xl mb-6">Latest Posts</h1>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {displayedPosts.map((post) => (
           <SmallPost key={post._id} data={post} />

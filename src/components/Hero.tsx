@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <Container>
       <div className="space-y-10 pb-10">
-        <div className="p-4 grid grid-cols-1 sm:p-6 lg:p-8 md:grid-cols-2 md:grid-rows-2 rounded-lg gap-4 h-full">
+        <div className="p-4 grid grid-cols-1 lg:p-8 lg:grid-cols-2 lg:grid-rows-2 rounded-lg gap-4 h-full">
           {/* <div className="absolute top-72 -left-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
           <div className="absolute top-96 left-14 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute top-40 left-32 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 "></div> */}
