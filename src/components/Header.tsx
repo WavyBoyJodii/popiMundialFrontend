@@ -2,6 +2,7 @@ import Container from './Container';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -10,7 +11,9 @@ export default function Header() {
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-10 items-center justify-between w-full">
           <div className="flex items-center">
             {/* need to add Link element when Router is setup*/}
-            <h1 className="text-xl font-bold">Popi Mundial</h1>
+            <Link to={'/'}>
+              <h1 className="text-xl font-bold">Popi Mundial</h1>
+            </Link>
           </div>
           <nav className="mx-6 flex items-center justify-items-center space-x-4 lg:space-x-6 hidden md:block">
             {/* <Link to="/"> */}
