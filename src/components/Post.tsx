@@ -4,6 +4,7 @@ import { DateTime } from 'luxon';
 import validator from 'validator';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
+import EditorOutput from './EditorOutput';
 
 interface PostProps {
   data: PostType;
@@ -17,7 +18,6 @@ export default function Post({ data, className, isTall }: PostProps) {
     DateTime.DATE_MED
   );
   const decodedArt = validator.unescape(data.art);
-  const decodedContent = validator.unescape(data.content);
   const route = data._id;
   return (
     <Card
@@ -56,7 +56,10 @@ export default function Post({ data, className, isTall }: PostProps) {
           >
             {data.title}
           </p>
-          <p className=" text-gray-700">{decodedContent}</p>
+          {/* <p className=" text-gray-700">{post}</p> */}
+          {data && (
+            <EditorOutput content={data.content} className=" text-gray-700" />
+          )}
           <Link to={`/post/${route}`}>
             <Button>See Post</Button>
           </Link>

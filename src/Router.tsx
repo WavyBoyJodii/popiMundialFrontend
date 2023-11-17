@@ -4,6 +4,7 @@ import ErrorPage from './components/ErrorPage';
 import Hero from './components/Hero';
 import PostPage from './components/PostPage';
 import GenrePage from './components/GenrePage';
+// import { genreLoader } from './lib/utils';
 
 export default function Router() {
   const router = createBrowserRouter([

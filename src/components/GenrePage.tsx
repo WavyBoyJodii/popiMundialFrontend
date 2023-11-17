@@ -4,9 +4,15 @@ import { useEffect, useState } from 'react';
 import { PostType } from '@/types';
 import axios, { AxiosResponse } from 'axios';
 import Container from './Container';
+import { useLocation } from 'react-router-dom';
+
+// type PostData = {
+//   filteredPosts: PostType[];
+// };
 
 export default function GenrePage() {
   const params = useParams();
+  const location = useLocation();
 
   const [genrePosts, setGenrePosts] = useState<PostType[] | null>(null);
 
@@ -33,7 +39,9 @@ export default function GenrePage() {
       }
     }
     getPosts();
-  }, [params.genre]);
+  }, [params, location.key]);
+
+  // const { filteredPosts } = useLoaderData() as PostData;
 
   if (!genrePosts)
     return (

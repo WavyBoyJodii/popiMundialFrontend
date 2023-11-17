@@ -6,8 +6,10 @@ import { PostType } from '@/types';
 import LatestPostList from './LatestPostList';
 
 export default function Hero() {
-  const [threeLatestPosts, setThreeLatestPosts] = useState<PostType[]>([]);
-  const [latestPosts, setLatestPosts] = useState<PostType[]>([]);
+  const [threeLatestPosts, setThreeLatestPosts] = useState<PostType[] | null>(
+    null
+  );
+  const [latestPosts, setLatestPosts] = useState<PostType[] | null>(null);
 
   useEffect(() => {
     async function getPosts() {
@@ -35,6 +37,7 @@ export default function Hero() {
           <div className="absolute top-96 left-14 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute top-40 left-32 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 "></div> */}
           {threeLatestPosts &&
+            threeLatestPosts.length &&
             threeLatestPosts.map((post, index) => (
               <Post
                 key={post._id}
@@ -47,12 +50,14 @@ export default function Hero() {
             ))}
         </div>
       </div>
-      <LatestPostList
-        posts={latestPosts}
-        isGenre={false}
-        isLatest={true}
-        genre=""
-      />
+      {latestPosts && (
+        <LatestPostList
+          posts={latestPosts}
+          isGenre={false}
+          isLatest={true}
+          genre=""
+        />
+      )}
     </Container>
   );
 }

@@ -1,3 +1,5 @@
+import type EditorJS from '@editorjs/editorjs';
+
 export interface BloggerType {
   username: string;
   password: string;
@@ -5,12 +7,18 @@ export interface BloggerType {
   admin: boolean;
 }
 
+export interface ContentData {
+  blocks: EditorJS.OutputBlockData[];
+  time: number;
+  version: string;
+}
+
 export interface PostType {
   _id: string;
   title: string;
   art: string;
   mediaUrl: string;
-  content: string;
+  content: ContentData;
   date_created: Date;
   tags: string[];
   genre: string;

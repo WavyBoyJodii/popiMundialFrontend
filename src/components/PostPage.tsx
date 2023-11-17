@@ -7,6 +7,7 @@ import validator from 'validator';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import PostSelector from './PostSelector';
+import EditorOutput from './EditorOutput';
 
 // interface RouteParams {
 //   postId: string;
@@ -53,7 +54,7 @@ export default function PostPage() {
   );
   const decodedArt = validator.unescape(post.art);
   console.log(decodedArt);
-  const decodedContent = validator.unescape(post.content);
+  // const decodedContent = validator.unescape(post.content);
   const decodedTitle = validator.unescape(post.title);
   const decodedMediaUrl = validator.unescape(post.mediaUrl);
   return (
@@ -71,8 +72,8 @@ export default function PostPage() {
         </div>
         <div className=" flex justify-center w-full h-1/3">
           <iframe
-            width="560"
-            height="315"
+            width="640"
+            height="360"
             src={decodedMediaUrl}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -84,7 +85,10 @@ export default function PostPage() {
             className=" h-full w-full aspect-auto rounded-xl object-cover"
           /> */}
         </div>
-        <div className=" p-20 text-base text-center">{decodedContent}</div>
+        <EditorOutput
+          className="p-20 text-base text-center"
+          content={post.content}
+        />
         <PostSelector activePost={post} />
       </div>
     </Container>
