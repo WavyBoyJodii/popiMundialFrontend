@@ -25,7 +25,7 @@ export default function MicroPost({ data, isPrev, isNext }: MicroPostProps) {
           {isNext && (
             <p className=" font-light text-xs text-gray-600">Next Post</p>
           )}
-          <p className=" font-semibold text-base">{decodedTitle}</p>
+          <p className=" font-semibold text-sm">{decodedTitle}</p>
         </div>
       </div>
     </Link>
