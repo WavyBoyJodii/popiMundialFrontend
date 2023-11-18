@@ -18,8 +18,12 @@ export default function Hero() {
           'https://firstblogbackend-production.up.railway.app/posts'
         );
         console.log(result);
-        const sliced: PostType[] = result.data.allPosts.slice(0, 3);
-        const postsAfterThird: PostType[] = result.data.allPosts.slice(3);
+        const sliced: PostType[] = result.data.allPosts
+          .toReversed()
+          .slice(0, 3);
+        const postsAfterThird: PostType[] = result.data.allPosts
+          .toReversed()
+          .slice(3);
         setThreeLatestPosts(sliced);
         setLatestPosts(postsAfterThird);
       } catch (err) {
