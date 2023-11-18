@@ -41,7 +41,7 @@ export default function Post({ data, className, isTall }: PostProps) {
       </CardContent>
       <CardFooter
         className={` ${
-          isTall ? '' : 'w-64 pt-4'
+          isTall ? '' : 'w-auto sm:w-64 sm:pt-4'
         } flex flex-col items-start gap-2`}
       >
         <div className="flex flex-col gap-4">
