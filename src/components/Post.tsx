@@ -22,7 +22,7 @@ export default function Post({ data, className, isTall }: PostProps) {
   return (
     <Card
       className={`${
-        isTall ? 'flex-col' : 'flex-row'
+        isTall ? 'flex-col' : 'flex-col md:flex-row'
       } ${className} flex rounded-3xl outline-0 focus:ring-2 hover:ring-2 ring-primary transition duration-300 sm:p-2 m-0`}
     >
       <CardContent className="pt-4">

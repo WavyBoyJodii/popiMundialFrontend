@@ -39,7 +39,7 @@ export default function PostSelector({ activePost }: PostSelectorProps) {
   }, [activePost]);
 
   return (
-    <div className="  h-36 w-1/2 p-14 flex justify-center items-center gap-14 mb-5 place-self-center rounded-xl bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-200 via-pink-200 to-pink-400">
+    <div className=" h-fit md:h-36 w-full md:w-1/2 p-14 flex flex-col md:flex-row justify-center items-center gap-14 mb-5 place-self-center rounded-xl bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-200 via-pink-200 to-pink-400">
       {prevPost && <MicroPost data={prevPost} isPrev={true} isNext={false} />}
       {nextPost && <MicroPost data={nextPost} isPrev={false} isNext={true} />}
     </div>

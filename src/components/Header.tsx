@@ -32,12 +32,15 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4">
-                {/* <Link className="block px-2 py-1 text-lg" to="/">
-                  Home
+                <Link className="block px-2 py-1 text-lg" to="/genre/Dembow">
+                  Dembow
                 </Link>
-                <Link className="block px-2 py-1 text-lg" to="shop">
-                  Shop
-                </Link> */}
+                <Link className="block px-2 py-1 text-lg" to="/genre/Trap">
+                  Trap
+                </Link>
+                <Link className="block px-2 py-1 text-lg" to="/genre/Reggaeton">
+                  Reggaeton
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
