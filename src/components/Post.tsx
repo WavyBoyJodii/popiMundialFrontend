@@ -28,7 +28,7 @@ export default function Post({ data, className, isTall }: PostProps) {
       <CardContent className="pt-4">
         <div
           className={` ${
-            isTall ? 'w-full h-96' : 'md:w-48 lg:w-64 xl:w-72'
+            isTall ? 'w-full h-96' : 'w-full lg:w-64 xl:w-72'
           } aspect-square  bg-gray-200 rounded-xl`}
         >
           <img
@@ -41,7 +41,7 @@ export default function Post({ data, className, isTall }: PostProps) {
       </CardContent>
       <CardFooter
         className={` ${
-          isTall ? '' : 'w-auto sm:w-64 sm:pt-4'
+          isTall ? '' : 'w-auto lg:w-64 lg:pt-4'
         } flex flex-col items-start gap-2`}
       >
         <div className="flex flex-col gap-4">
