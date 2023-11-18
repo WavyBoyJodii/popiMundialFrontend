@@ -1,4 +1,4 @@
-import type EditorJS from '@editorjs/editorjs';
+import * as EditorJS from '@editorjs/editorjs';
 
 export interface BloggerType {
   username: string;
