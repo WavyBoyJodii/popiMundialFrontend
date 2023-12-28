@@ -46,7 +46,9 @@ export default function LatestPostList({
   return (
     <div className=" space-y-4 p-4 h-auto">
       {isGenre && <h1 className=" text-2xl mb-6 text-center">{genre}</h1>}
-      {isLatest && <h1 className=" text-2xl mb-6 text-center">Latest Posts</h1>}
+      {isLatest && (
+        <h1 className=" text-2xl mb-6 text-center">Previous Posts</h1>
+      )}
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {allPosts.map((post) => (
           <SmallPost key={post._id} data={post} />
