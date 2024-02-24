@@ -1,27 +1,11 @@
-# React + TypeScript + Vite
+# Popi Mundial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Popi Mundial was one of the first fullstack apps that I built. I wanted to combine my passion of music, with my current spanish language integration by creating a blog to keep track of spanish language songs that I find and like.
 
-Currently, two official plugins are available:
+Using Typescript, Tailwind, Express, and React powered by Vite i was able to construct a fully responsive website connected to a backend that used MongoDb for data storage and queries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I still update this site with music so feel free to browse through and catch some vibes. 🏝
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![App Screenshot](https://jodii-dev.vercel.app/_next/image?url=%2Fprojects%2Fpopi-mundial-frontend.vercel.app_.png&w=828&q=75)
